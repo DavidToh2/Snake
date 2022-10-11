@@ -29,7 +29,7 @@ To look at methods of input via `.txt` and `.ini` files in the future.
 
 $ \displaystyle\sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = $ 
 
-$ \displaystyle\left(\frac{a}{b}\right) $
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 <br>
 
