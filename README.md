@@ -27,7 +27,9 @@ To look at methods of input via `.txt` and `.ini` files in the future.
 
 <br>
 
-$$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation. Note "\displaystyle" doesn't work} $$ 
+$$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation} $$ 
+
+$ \displaystyle\frac{1}{2} $
 
 <br>
 
