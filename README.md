@@ -29,7 +29,7 @@ To look at methods of input via `.txt` and `.ini` files in the future.
 
 $$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation} $$ 
 
-$ \displaystyle\frac{1}{2} $
+Note that "displaystyle" doesn't work on github.
 
 <br>
 
