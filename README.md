@@ -29,6 +29,8 @@ To look at methods of input via `.txt` and `.ini` files in the future.
 
 $ \displaystyle\sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = $ 
 
+% \displaystyle\left(\frac{a}{b}\right) $
+
 <br>
 
 ## Part II: Actual Snake Game
