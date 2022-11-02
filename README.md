@@ -30,8 +30,14 @@ Your output should consist of two parts:
 To look at methods of input via `.txt` and `.ini` files in the future.
 
 
-<hr>
-
 $$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation} $$ 
 
 Note that "displaystyle" doesn't work on github.
+
+<br>
+
+## Part II: Actual Snake Game
+
+$$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation} $$ 
+
+[Tutorial 2: thenumb.at](https://thenumb.at/cpp-course/index.html)
