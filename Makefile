@@ -1,5 +1,5 @@
 # Code files to be compiled
-OBJS = snake.cpp
+OBJS = snake.cpp renderer.cpp events.cpp graphics.cpp game.cpp attributes.cpp
 
 CC = g++
 

@@ -1,6 +1,10 @@
 # C++ Snake game
 
-<br>
+## Part II: Actual Snake Game
+
+[Tutorial 1: lazyfoo.com](https://lazyfoo.net/tutorials/)
+
+[Tutorial 2: thenumb.at](https://thenumb.at/cpp-course/index.html)
 
 ## Part I: Snake Simulation
 
@@ -25,14 +29,9 @@ Your output should consist of two parts:
 
 To look at methods of input via `.txt` and `.ini` files in the future.
 
-<br>
 
-$\displaystyle\sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = $ cool math equation
+<hr>
 
-<br>
+$$ \sum_{i=0}^{n}\left(\sum_{cyc} a^{i}b(a-b) + b^{i}c(b-c) + c^{i}a(c-a)\right) = \text{cool math equation} $$ 
 
-## Part II: Actual Snake Game
-
-[Tutorial 1: lazyfoo.com](https://lazyfoo.net/tutorials/)
-
-[Tutorial 2: thenumb.at](https://thenumb.at/cpp-course/index.html)
+Note that "displaystyle" doesn't work on github.
