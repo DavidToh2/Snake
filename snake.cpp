@@ -15,7 +15,7 @@
 int main( int argc, char* argv[] ) {
 
     renderEngine renderer;
-    Game game(WIDTH, HEIGHT, 1);
+    Game game(WIDTH, HEIGHT, 0.3);
 
     if (!renderer.rendererStart()) {
         return 1;
@@ -64,6 +64,8 @@ int main( int argc, char* argv[] ) {
 
         game.gameFPSControl();
     }
+
+    std::cout << "Stopping game...\n";
 
     renderer.rendererStop();
     

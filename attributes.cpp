@@ -12,10 +12,10 @@ const int SPRITE_HEIGHT = 32;
 const int WIDTH = 20;
 const int HEIGHT = 15;
 
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 740;
+const int SCREEN_HEIGHT = 580;
 
-const double SPF = 0.05;
+const double SPF = 0.0166;
 
 std::map<std::string, std::map<std::string, std::vector<int>>> spriteList = {
     {"spritemap.png", {
@@ -36,13 +36,13 @@ std::map<std::string, std::map<std::string, std::vector<int>>> spriteList = {
         {"tailW",   {192, 192, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
         {"cell",    {0, 64, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
         {"cellN",   {256, 0, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellE",   {256, 64, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellS",   {256, 128, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
+        {"cellS",   {256, 64, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
+        {"cellE",   {256, 128, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
         {"cellW",   {256, 192, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellSE",  {320, 0, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellSW",  {320, 64, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellNW",  {320, 128, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
-        {"cellNE",  {320, 192, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} }
+        {"cellNE",  {320, 0, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
+        {"cellSE",  {320, 64, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
+        {"cellSW",  {320, 128, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} },
+        {"cellNW",  {320, 192, SPRITE_SRC_WIDTH, SPRITE_SRC_HEIGHT} }
         }
     }
 };

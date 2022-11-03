@@ -6,11 +6,9 @@
 #include "attributes.h"
 #include "renderer.h"
 
-int w = SCREEN_WIDTH / WIDTH;
-int h = SCREEN_HEIGHT / HEIGHT;
 
 std::vector<int> getDestVect(int x, int y) {
-    return {32 * x, 32 * y, SPRITE_WIDTH, SPRITE_HEIGHT};
+    return {50 + 32 * x, 50 + 32 * y, SPRITE_WIDTH, SPRITE_HEIGHT};
 }
 
 void drawBackground(renderEngine& renderer) {
@@ -29,15 +27,15 @@ void drawBackground(renderEngine& renderer) {
             if (i == 0) {
                 if (j == 0) {
                     renderer.blitImage("cellNW", &destVect);
-                } else if (j == WIDTH) {
+                } else if (j == WIDTH-1) {
                     renderer.blitImage("cellNE", &destVect);
                 } else {
                     renderer.blitImage("cellN", &destVect);
                 }
-            } else if (i == HEIGHT) {
+            } else if (i == HEIGHT-1) {
                 if (j == 0) {
                     renderer.blitImage("cellSW", &destVect);
-                } else if (j == WIDTH) {
+                } else if (j == WIDTH-1) {
                     renderer.blitImage("cellSE", &destVect);
                 } else {
                     renderer.blitImage("cellS", &destVect);
@@ -45,7 +43,7 @@ void drawBackground(renderEngine& renderer) {
             } else {
                 if (j == 0) {
                     renderer.blitImage("cellW", &destVect);
-                } else if (j == WIDTH) {
+                } else if (j == WIDTH-1) {
                     renderer.blitImage("cellE", &destVect);
                 } else {
                     renderer.blitImage("cell", &destVect);

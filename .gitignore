@@ -1,3 +1,4 @@
 .vscode
 game.cpp_old
 renderer.cpp_old
+valgrind-out.txt

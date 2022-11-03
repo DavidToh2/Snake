@@ -36,7 +36,7 @@ class renderEngine {
         SDL_Surface* getRawImage(std::string imgName);
         SDL_Texture* getImage(std::string imgName, SDL_Renderer* targetRenderer);
         void flushCache();
-        ~imgCache();
+        // ~imgCache();
     };
 
     SDL_Window* window;

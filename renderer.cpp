@@ -61,7 +61,7 @@ bool renderEngine::imgCache::cacheImageMap(std::vector<std::string> imgNameList,
     }
     int i = 0;
     for (SDL_Rect rect : rectList) {
-        SDL_Surface* newSurface = SDL_CreateRGBSurface(0, rect.w, rect.h, 32, 0, 0, 0, 0);
+        SDL_Surface* newSurface = SDL_CreateRGBSurface(0, rect.w, rect.h, 32, 0xFF000000, 0x00FF0000, 0x0000FF00, 0x000000FF);
 
         SDL_BlitSurface(mapSurface, &rect, newSurface, NULL);
 
@@ -98,18 +98,19 @@ SDL_Texture* renderEngine::imgCache::getImage(std::string imgName, SDL_Renderer*
 }
 
 void renderEngine::imgCache::flushCache() {
-    std::map<std::string, SDL_Surface*>::iterator i = cache_.begin();
-    for (;i != cache_.end(); i++) {
+    for (std::map<std::string, SDL_Surface*>::iterator i = cache_.begin(); i != cache_.end(); i++) {
         SDL_FreeSurface(i->second);
     }
 }
 
-        // Class destructor
-renderEngine::imgCache::~imgCache() {flushCache();}
+        // Class destructor. 
+        // The renderer destructor is called when SDL_Quit() is called. This, in turn, calls the imageCache destructor.
+        // This means that flushCache() is called again, leading to a segfault.
+// renderEngine::imgCache::~imgCache() {flushCache();}
 
-
-            // RENDER ENGINE MEMBER FUNCTION DEFINITIONS
-
+            ///////////////////////////////////////////////
+            // RENDER ENGINE MEMBER FUNCTION DEFINITIONS //
+            ///////////////////////////////////////////////
 
 renderEngine::renderEngine() {
     window = NULL;
@@ -225,6 +226,8 @@ bool renderEngine::blitImage(std::string imgName, std::vector<int>* destCoords, 
     } else {
         SDL_RenderCopy(renderer, newTexture, &srcRect, &destRect);
     }
+
+    SDL_DestroyTexture(newTexture);
 }
 
 bool renderEngine::renderClear() {
@@ -239,12 +242,12 @@ bool renderEngine::rendererUpdate() {
 bool renderEngine::rendererStop() {
     imageCache.flushCache();
 
-    SDL_DestroyRenderer(renderer);
-    renderer = NULL;
-
     SDL_DestroyWindow(window);
-    window = NULL;
+
+    SDL_DestroyRenderer(renderer);
+
     // It's a good practice to reset pointers to point to NULL when they aren't in use.
+    IMG_Quit();
     SDL_Quit();
     return true;
 }

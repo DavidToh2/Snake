@@ -290,5 +290,6 @@ void Game::gameFPSControl() {
     while (Timer.calcFPSTimer() < SPF) {
 
     }
+    std::cout << Timer.calcFPSTimer() << std::endl;
     Timer.resetFPSTimer();
 }
