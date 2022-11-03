@@ -68,6 +68,10 @@ int Game::snakeUpdate() {
         std::cout << "Ate an apple!\n";
         snakeLength += 1;
         spawnApple();
+
+        if (snakeLength % 5 == 2) {
+            mvtInterval = 15.0 / (snakeLength + 98);
+        }
     }
 
     if (c == 0) {
@@ -286,10 +290,12 @@ bool Game::getGameState() {
     }
 }
 
-void Game::gameFPSControl() {
+double Game::gameFPSControl() {
     while (Timer.calcFPSTimer() < SPF) {
 
     }
-    std::cout << Timer.calcFPSTimer() << std::endl;
+    double calculatedSPF = Timer.calcFPSTimer();
+    // std::cout << Timer.calcFPSTimer() << std::endl;
     Timer.resetFPSTimer();
+    return calculatedSPF;
 }

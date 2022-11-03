@@ -68,12 +68,12 @@ class Game {
     std::vector<std::pair<std::pair<int, int>, std::string>> getBoardData();
     bool snakeChangeDir(std::string d);
 
-    void gameFPSControl();
-
     void gamePause();
     void gameResume();
     bool gameEnd();
     bool getGameState();
+
+    double gameFPSControl();
 
 };
 
