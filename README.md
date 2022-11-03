@@ -2,7 +2,7 @@
 
 ## Part I: Actual Snake Game
 
-Snake game built in C++ using SDL.
+Snake game built in C++ using SDL. The objective of this project is to familiarise myself with coding exportable/re-usable modules and overall project structure.
 
 ### Game files:
 
